@@ -33,6 +33,7 @@
         .left-column {
             flex: 1;
             min-width: 250px;
+            border-right: 2px solid #ccc; /* vertical dividing line */
         }
 
         .right-column {
@@ -66,12 +67,24 @@
         ul {
             padding-left: 20px;
         }
+
+        /* Responsive adjustments */
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column;
+            }
+            .left-column {
+                border-right: none;
+                border-bottom: 2px solid #ccc;
+            }
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="your-photo.jpg" alt="Lovella Bayot" class="profile-pic">
+    <img src="Gemini_Generated_Image_pmrs9tpmrs9tpmrs.png
+        " alt="Lovella Bayot" class="profile-pic">
     <h1>Lovella Bayot</h1>
 </header>
 
@@ -79,7 +92,13 @@
     <!-- Left Column -->
     <div class="left-column">
         <h2>Profile</h2>
-        <p>Brief description about yourself goes here.</p>
+        <p>Dynamic professional with 8 years of diverse experience in Customer service, Talent
+Acquisition, and data analysis, demonstrating a commitment to operational excellence
+and client satisfaction. Proven ability to develop and implement effective policies and
+procedures, enhancing service delivery and performance tracking. Skilled in generating
+business leads and fostering collaboration across teams to optimize processes. Ready to
+bring a strong administrative support background to virtual assistant role ensuring an
+efficient and effective service.</p>
 
         <hr>
 

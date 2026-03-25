@@ -4,144 +4,109 @@
     <title>Lovella Bayot | Portfolio</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #121212;
-            color: #e0e0e0;
+            font-family: Arial, sans-serif;
             margin: 0;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #001f3f;
+            color: white;
+            padding: 30px;
+            text-align: center;
         }
 
         .container {
-            max-width: 1000px;
-            margin: 50px auto;
             display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
             gap: 20px;
         }
 
-        .left-panel {
+        .left-column, .right-column {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .left-column {
             flex: 1;
-            text-align: center;
+            min-width: 250px;
         }
 
-        .left-panel img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 4px solid #fff;
-            object-fit: cover;
-        }
-
-        .left-panel h2 {
-            margin: 15px 0 5px 0;
-            color: #fff;
-        }
-
-        .left-panel p {
-            font-size: 0.9em;
-            color: #aaa;
-            margin: 2px 0;
-        }
-
-        .left-panel a {
-            color: #00aced;
-            text-decoration: none;
-        }
-
-        .right-panel {
+        .right-column {
             flex: 2;
-            background: #1e1e1e;
-            border-radius: 15px;
-            padding: 30px;
-            position: relative;
+            min-width: 300px;
         }
 
-        .banner {
-            background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
-            text-align: center;
-            padding: 40px 20px;
-            border-radius: 12px 12px 0 0;
-            color: white;
-            margin: -30px -30px 20px -30px;
+        h1, h2, h3 {
+            margin: 0 0 10px 0;
         }
 
-        .banner h1 {
-            margin: 0;
-            font-size: 2.2em;
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 20px;
         }
 
-        .banner p {
-            margin: 5px 0 0 0;
-            font-size: 1.1em;
+        .experience, .skills {
+            margin-bottom: 15px;
         }
 
-        .right-panel h3 {
-            margin-top: 20px;
-            color: #00aced;
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ccc;
+            margin: 20px 0;
         }
 
-        .right-panel ul {
+        ul {
             padding-left: 20px;
-            line-height: 1.6;
-        }
-
-        .right-panel ul li {
-            margin-bottom: 10px;
-        }
-
-        .highlight {
-            color: #ffcc00;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 0.9em;
-            color: #aaa;
-        }
-
-        /* Optional fun graphic */
-        .owl-image {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            width: 80px;
         }
     </style>
 </head>
 <body>
 
+<header>
+    <img src="your-photo.jpg" alt="Lovella Bayot" class="profile-pic">
+    <h1>Lovella Bayot</h1>
+</header>
+
 <div class="container">
-    <div class="left-panel">
-        <img src="Gemini_Generated_Image_pmrs9tpmrs9tpmrs.png" alt="Lovella Bayot">
-        <h2>Lovella Bayot</h2>
-        <p>Customer Service | Talent Acquisition | Data Entry</p>
-        <p>📧 your@email.com</p>
-        <p>📞 09957233797 / 09617090928</p>
-        <p>🌐 <a href="#">Portfolio Link</a></p>
-    </div>
+    <!-- Left Column -->
+    <div class="left-column">
+        <h2>Profile</h2>
+        <p>Brief description about yourself goes here.</p>
 
-    <div class="right-panel">
-        <div class="banner">
-            <h1>HELLO WORLD 👋</h1>
-            <p>Welcome to my Portfolio</p>
+        <hr>
+
+        <h2>Skills</h2>
+        <div class="skills">
+            <ul>
+                <li>Skill 1</li>
+                <li>Skill 2</li>
+                <li>Skill 3</li>
+            </ul>
         </div>
-
-        <h3>I'm Lovella!</h3>
-        <p class="highlight">Digital Craftsman / Virtual Assistant / Admin Support</p>
-
-        <ul>
-            <li>✨ 8 years of experience in Customer Service, Talent Acquisition, and Data Entry</li>
-            <li>💡 Skilled in process optimization, data management, and client satisfaction</li>
-            <li>📚 Continuous learner, always improving skills in admin, Excel, and communication</li>
-            <li>📝 Writing guides and notes to improve team productivity</li>
-            <li>❤️ Committed to delivering excellence in every task</li>
-        </ul>
-
-        <img src="/mnt/data/046c6c56-0b9d-4845-8bdb-34c3eb5bf1ab.png" class="owl-image" alt="fun owl graphic">
     </div>
-</div>
 
-<div class="footer">
-    © 2026 Lovella Bayot
+    <!-- Right Column -->
+    <div class="right-column">
+        <h2>Experience</h2>
+        <div class="experience">
+            <h3>Job Title 1</h3>
+            <p>Company Name | Date Range</p>
+            <p>Job description goes here.</p>
+        </div>
+        <div class="experience">
+            <h3>Job Title 2</h3>
+            <p>Company Name | Date Range</p>
+            <p>Job description goes here.</p>
+        </div>
+    </div>
 </div>
 
 </body>

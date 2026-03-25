@@ -4,109 +4,145 @@
     <title>Lovella Bayot | Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #121212;
+            color: #e0e0e0;
             margin: 0;
-            background: #f4f4f4;
         }
-        header {
-            background: #001f3f;
-            color: white;
+
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            display: flex;
+            gap: 20px;
+        }
+
+        .left-panel {
+            flex: 1;
+            text-align: center;
+        }
+
+        .left-panel img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            object-fit: cover;
+        }
+
+        .left-panel h2 {
+            margin: 15px 0 5px 0;
+            color: #fff;
+        }
+
+        .left-panel p {
+            font-size: 0.9em;
+            color: #aaa;
+            margin: 2px 0;
+        }
+
+        .left-panel a {
+            color: #00aced;
+            text-decoration: none;
+        }
+
+        .right-panel {
+            flex: 2;
+            background: #1e1e1e;
+            border-radius: 15px;
             padding: 30px;
+            position: relative;
+        }
+
+        .banner {
+            background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
             text-align: center;
+            padding: 40px 20px;
+            border-radius: 12px 12px 0 0;
+            color: white;
+            margin: -30px -30px 20px -30px;
         }
-        section {
-            padding: 20px;
-            margin: 20px;
-            background: white;
-            border-radius: 10px;
+
+        .banner h1 {
+            margin: 0;
+            font-size: 2.2em;
         }
-        h2 {
-            color: #2c3e50;
+
+        .banner p {
+            margin: 5px 0 0 0;
+            font-size: 1.1em;
         }
-        ul {
-            line-height: 1.8;
+
+        .right-panel h3 {
+            margin-top: 20px;
+            color: #00aced;
         }
-        footer {
+
+        .right-panel ul {
+            padding-left: 20px;
+            line-height: 1.6;
+        }
+
+        .right-panel ul li {
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            color: #ffcc00;
+        }
+
+        .footer {
             text-align: center;
-            padding: 10px;
-            background: #001f3f;
-            background: ;
-            color: royal blue;
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #aaa;
+        }
+
+        /* Optional fun graphic */
+        .owl-image {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 80px;
         }
     </style>
 </head>
-
 <body>
 
-<header>
-        <img src="Gemini_Generated_Image_pmrs9tpmrs9tpmrs.png
-" alt="My Photo" style="width:120px; height:120px; border-radius:50%; margin-bottom:10px;">
-    <h1>Lovella Bayot 👋</h1>
-    <p>Customer Service | Talent Acquisition | Data Entry</p>
-</header>
+<div class="container">
+    <div class="left-panel">
+        <img src="Gemini_Generated_Image_pmrs9tpmrs9tpmrs.png" alt="Lovella Bayot">
+        <h2>Lovella Bayot</h2>
+        <p>Customer Service | Talent Acquisition | Data Entry</p>
+        <p>📧 your@email.com</p>
+        <p>📞 09957233797 / 09617090928</p>
+        <p>🌐 <a href="#">Portfolio Link</a></p>
+    </div>
 
-<section>
-    <h2>Get to Know Me</h2>
-    <p>
-        Dynamic professional with 8 years of diverse experience in Customer service, Talent
-Acquisition, and data analysis, demonstrating a commitment to operational excellence
-and client satisfaction. Proven ability to develop and implement effective policies and
-procedures, enhancing service delivery and performance tracking. Skilled in generating
-business leads and fostering collaboration across teams to optimize processes. Ready to
-bring a strong administrative support background to virtual assistant role ensuring an efficient and effective service.
-    </p>
-</section>
-<hr>
-<section>
-    <h2>Work Experiences</h2>
-    <ul>
-        <li><b>Data Analyst</b> 
-               <small>Mar 2023 – Oct 2025</small><br>
-            – Delivered remote data entry and administrative support, including
-CRM updates, email management, file organization, and report
-preparation, with a strong focus on accuracy and deadlines..</li>
-        
-        <li><b>Talent Acquisition</b> 
-               <small>Jan 2022 – Jan 2023</small><br>
-            – Screened resumes, conducted phone interviews and coordinated
-onsite interviews for potential candidates. Participated in career fairs
-and networking events to attract top talent to the organization..</li>
-        
-        <li><b>Customer Service Representative</b> 
-              <small>Sept 2016 – July 2022</small><br>
-            – Provided exceptional customer service to clients through phone, email
-and chat support Resolved technical issues and inquires in a timely and
-efficient manner.</li>
-    </ul>
-    </section>
-<hr>
-<section>
-    <h2>Educational Attainment</h2>
-               <h2>Business Administration - Marketing Management</h2>
-                <small>June 2013 – Apr 2018</small><br>
-     </ul>
-<hr>
-<section>
-    <h2>Skills</h2>
-    <ul>
-        <li>✔ Attention to Detail</li>
-        <li>✔ Teamwork</li>
-        <li>✔ Time Management</li>
-        <li>✔ Customer Service</li>
-        <li>✔ Admin Support</li>
-    </ul>
-</section>
-<hr>
-<section>
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
-    <p>Phone Number: 09957233797/09617090928</p>
+    <div class="right-panel">
+        <div class="banner">
+            <h1>HELLO WORLD 👋</h1>
+            <p>Welcome to my Portfolio</p>
+        </div>
 
-</section>
-<footer>
-    <p>© 2026 Ella Bayot</p>
-</footer>
+        <h3>I'm Lovella!</h3>
+        <p class="highlight">Digital Craftsman / Virtual Assistant / Admin Support</p>
+
+        <ul>
+            <li>✨ 8 years of experience in Customer Service, Talent Acquisition, and Data Entry</li>
+            <li>💡 Skilled in process optimization, data management, and client satisfaction</li>
+            <li>📚 Continuous learner, always improving skills in admin, Excel, and communication</li>
+            <li>📝 Writing guides and notes to improve team productivity</li>
+            <li>❤️ Committed to delivering excellence in every task</li>
+        </ul>
+
+        <img src="/mnt/data/046c6c56-0b9d-4845-8bdb-34c3eb5bf1ab.png" class="owl-image" alt="fun owl graphic">
+    </div>
+</div>
+
+<div class="footer">
+    © 2026 Lovella Bayot
+</div>
 
 </body>
 </html>
-update portfolio

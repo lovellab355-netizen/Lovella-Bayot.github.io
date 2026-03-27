@@ -1,116 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lovella Bayot | About</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lovella Bayot | Portfolio</title>
+  <style>
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth; /* enables smooth scrolling */
+    }
 
-        /* Navigation */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 50px;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        nav .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #c00;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #555;
-            font-weight: 500;
-        }
-        nav ul li a.active {
-            border-bottom: 2px solid #00aaff;
-            padding-bottom: 2px;
-            color: #00aaff;
-        }
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #c00;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #555;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #00aaff;
+      border-bottom: 2px solid #00aaff;
+      padding-bottom: 2px;
+    }
 
-        /* About Section */
-        .about {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            max-width: 1200px;
-            margin: 60px auto;
-            gap: 50px;
-            padding: 0 20px;
-        }
-        .about-text {
-            flex: 1;
-        }
-        .about-text h2 {
-            color: #c00;
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-        .about-text p {
-            line-height: 1.7;
-            color: #555;
-        }
-        .about-image {
-            flex: 1;
-        }
-        .about-image img {
-            width: 100%;
-            border-radius: 10px;
-            object-fit: cover;
-        }
+    /* Sections */
+    section {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
 
-        /* Responsive */
-        @media(max-width: 900px) {
-            .about {
-                flex-direction: column;
-            }
-            .about-image img {
-                width: 80%;
-                margin: 0 auto;
-            }
-        }
-    </style>
+    /* About Section */
+    .about {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+    }
+    .about-text {
+      flex: 1;
+    }
+    .about-text h2 {
+      color: #c00;
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    .about-text p {
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .about-text .btn {
+      display: inline-block;
+      background-color: #00aaff;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+    .about-text .btn:hover {
+      background-color: #0088cc;
+    }
+    .about-image {
+      flex: 1;
+      text-align: center;
+    }
+    .about-image img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Skills Section */
+    .skills h2 {
+      color: #c00;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .skills ul {
+      list-style: none;
+      padding: 0;
+    }
+    .skills ul li {
+      background: #fff;
+      margin-bottom: 10px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    /* Contact Section */
+    .contact h2 {
+      color: #c00;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+    }
+    .contact input, .contact textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+    .contact button {
+      background-color: #00aaff;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .contact button:hover {
+      background-color: #0088cc;
+    }
+
+    /* Responsive */
+    @media(max-width: 900px) {
+      .about {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about-image img {
+        width: 80%;
+        margin: 20px auto;
+      }
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <div class="logo">Lovella</div>
-        <ul>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#" class="active">About</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+  <nav>
+    <div class="logo">Lovella</div>
+    <ul>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#about" class="active">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <section class="about">
-        <div class="about-text">
-            <h2>About Me</h2>
-            <p>
-                Dynamic professional with 8 years of experience in Customer Service, Talent Acquisition, and Data Analysis. 
-                Skilled in generating business leads, optimizing processes, and fostering collaboration across teams. 
-                Committed to delivering efficient and high-quality support in virtual assistant and administrative roles.
-            </p>
-        </div>
-        <div class="about-image">
-            <img src="Gemini_Generated_Image_pmrs9tpmrs9tpmrs.png
-" alt="Lovella Bayot">
-        </div>
-    </section>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        Dynamic professional with 8 years of experience in Customer Service, Talent Acquisition, and Data Analysis. 
+        Skilled in generating business leads, optimizing processes, and fostering collaboration across teams. 
+        Committed to delivering efficient and high-quality support in virtual assistant and administrative roles.
+      </p>
+      <a href="resume.pdf" class="btn">Download Resume</a>
+    </div>
+    <div class="about-image">
+      <img src="your-photo.jpg" alt="Lovella Bayot">
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Customer Service Excellence</li>
+      <li>Talent Acquisition & Recruitment</li>
+      <li>Data Analysis & Reporting</li>
+      <li>Process Optimization</li>
+      <li>Virtual Assistance & Administration</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 </body>
 </html>

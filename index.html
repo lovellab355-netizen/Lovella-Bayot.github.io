@@ -11,7 +11,7 @@
       background-color: #f9f9f9;
       color: #333;
       line-height: 1.6;
-      scroll-behavior: smooth; /* enables smooth scrolling */
+      scroll-behavior: smooth;
     }
 
     /* Navigation */
@@ -65,18 +65,13 @@
       justify-content: center;
       gap: 50px;
     }
-    .about-text {
-      flex: 1;
-    }
+    .about-text { flex: 1; }
     .about-text h2 {
       color: #c00;
       font-size: 2.2rem;
       margin-bottom: 20px;
     }
-    .about-text p {
-      color: #555;
-      margin-bottom: 20px;
-    }
+    .about-text p { color: #555; margin-bottom: 20px; }
     .about-text .btn {
       display: inline-block;
       background-color: #00aaff;
@@ -87,13 +82,8 @@
       font-weight: 500;
       transition: background 0.3s ease;
     }
-    .about-text .btn:hover {
-      background-color: #0088cc;
-    }
-    .about-image {
-      flex: 1;
-      text-align: center;
-    }
+    .about-text .btn:hover { background-color: #0088cc; }
+    .about-image { flex: 1; text-align: center; }
     .about-image img {
       width: 100%;
       max-width: 400px;
@@ -102,117 +92,7 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    /* Skills Section */
-    .skills h2 {
+    /* Work Experience Section */
+    .experience h2 {
       color: #c00;
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-    .skills ul {
-      list-style: none;
-      padding: 0;
-    }
-    .skills ul li {
-      background: #fff;
-      margin-bottom: 10px;
-      padding: 10px 15px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-
-    /* Contact Section */
-    .contact h2 {
-      color: #c00;
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-    .contact form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      max-width: 500px;
-    }
-    .contact input, .contact textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-family: inherit;
-    }
-    .contact button {
-      background-color: #00aaff;
-      color: #fff;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    .contact button:hover {
-      background-color: #0088cc;
-    }
-
-    /* Responsive */
-    @media(max-width: 900px) {
-      .about {
-        flex-direction: column;
-        text-align: center;
-      }
-      .about-image img {
-        width: 80%;
-        margin: 20px auto;
-      }
-    }
-  </style>
-</head>
-<body>
-  <nav>
-    <div class="logo">Lovella</div>
-    <ul>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#about" class="active">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="about-text">
-      <h2>About Me</h2>
-      <p>
-        Dynamic professional with 8 years of experience in Customer Service, Talent Acquisition, and Data Analysis. 
-        Skilled in generating business leads, optimizing processes, and fostering collaboration across teams. 
-        Committed to delivering efficient and high-quality support in virtual assistant and administrative roles.
-      </p>
-      <a href="resume.pdf" class="btn">Download Resume</a>
-    </div>
-    <div class="about-image">
-      <img src="your-photo.jpg" alt="Lovella Bayot">
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Customer Service Excellence</li>
-      <li>Talent Acquisition & Recruitment</li>
-      <li>Data Analysis & Reporting</li>
-      <li>Process Optimization</li>
-      <li>Virtual Assistance & Administration</li>
-    </ul>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-</body>
-</html>
+      font-size

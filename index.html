@@ -100,22 +100,89 @@
     </div>
 
     <!-- Work Experience Box -->
-    <div class="box">
-        <h2>Work Experience</h2>
+   <div class="box">
+    <h2>Work Experience</h2>
 
-        <p><strong>VXI GLOBAL HOLDINGS | 2023-2025</strong><br>
-        Data Analyst</p>
-        <p>Delivered remote data entry and administrative support, including CRM updates, email management, file organization, and report preparation. Ensured data accuracy and consistency, provided actionable insights for management, and helped optimize operational workflows.</p>
+    <!-- Accordion Container -->
+    <div class="accordion">
 
-        <p><strong>CMB SEARCHING and STAFFING | 2022-2023</strong><br>
-        Talent Acquisition Associate</p>
-        <p>Screened resumes and applications, conducted phone and in-person interviews, and coordinated the recruitment process. Participated in career fairs and networking events to attract top talent. Collaborated with hiring managers to define role requirements and ensure a smooth onboarding process.</p>
+        <!-- Company 1 -->
+        <button class="accordion-btn">VXI GLOBAL HOLDINGS | 2023-2025</button>
+        <div class="accordion-content">
+            <p><strong>Data Analyst</strong></p>
+            <p>Delivered remote data entry and administrative support, including CRM updates, email management, file organization, and report preparation. Ensured data accuracy and consistency, provided actionable insights for management, and helped optimize operational workflows.</p>
+        </div>
 
-        <p><strong>ALORICA DAVAO | 2016-2021</strong><br>
-        Customer Service Support</p>
-        <p>Provided exceptional customer service through phone, email, and chat support. Assisted clients with inquiries, resolved technical and account issues, and maintained high customer satisfaction. Trained new staff on support procedures and contributed to process improvements for faster response times.</p>
+        <!-- Company 2 -->
+        <button class="accordion-btn">CMB SEARCHING and STAFFING | 2022-2023</button>
+        <div class="accordion-content">
+            <p><strong>Talent Acquisition Associate</strong></p>
+            <p>Screened resumes and applications, conducted phone and in-person interviews, and coordinated the recruitment process. Participated in career fairs and networking events to attract top talent. Collaborated with hiring managers to define role requirements and ensure a smooth onboarding process.</p>
+        </div>
+
+        <!-- Company 3 -->
+        <button class="accordion-btn">ALORICA DAVAO | 2016-2021</button>
+        <div class="accordion-content">
+            <p><strong>Customer Service Support</strong></p>
+            <p>Provided exceptional customer service through phone, email, and chat support. Assisted clients with inquiries, resolved technical and account issues, and maintained high customer satisfaction. Trained new staff on support procedures and contributed to process improvements for faster response times.</p>
+        </div>
+
     </div>
+</div>
 
+<style>
+/* Accordion button */
+.accordion-btn {
+    background: #f9f9f9;
+    color: #001f3f;
+    cursor: pointer;
+    padding: 15px 20px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight:600;
+    border-radius:8px;
+    margin-bottom:10px;
+    transition: background 0.3s ease;
+}
+
+.accordion-btn:hover {
+    background: #f0f0f0;
+}
+
+/* Hidden content */
+.accordion-content {
+    padding: 0 20px 15px 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: #f9f9f9;
+    border-radius: 0 0 8px 8px;
+    margin-bottom:10px;
+}
+</style>
+
+<script>
+// Accordion functionality
+const accBtns = document.querySelectorAll(".accordion-btn");
+
+accBtns.forEach(btn => {
+    btn.addEventListener("click", function() {
+        const content = this.nextElementSibling;
+
+        // Toggle active state
+        if(content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            // Close all other accordions
+            document.querySelectorAll('.accordion-content').forEach(c => c.style.maxHeight = null);
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+</script>
     <!-- Education Box -->
     <div class="box">
         <h2>Education</h2>

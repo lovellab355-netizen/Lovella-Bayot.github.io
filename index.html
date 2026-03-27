@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lovella Bayot | Portfolio</title>
   <style>
+    /* ===== Base Styles ===== */
     body {
       font-family: 'Poppins', Arial, sans-serif;
       margin: 0;
@@ -14,7 +15,20 @@
       scroll-behavior: smooth;
     }
 
-    /* Navigation */
+    a { text-decoration: none; }
+
+    section { 
+      max-width: 1000px; 
+      margin: 60px auto; 
+      padding: 0 20px; 
+    }
+
+    h2 { 
+      color: #c00; 
+      margin-bottom: 20px; 
+    }
+
+    /* ===== Navigation ===== */
     nav {
       display: flex;
       justify-content: space-between;
@@ -26,11 +40,13 @@
       top: 0;
       z-index: 1000;
     }
+
     nav .logo {
       font-size: 1.5rem;
       font-weight: bold;
       color: #c00;
     }
+
     nav ul {
       list-style: none;
       display: flex;
@@ -38,103 +54,110 @@
       margin: 0;
       padding: 0;
     }
+
     nav ul li a {
-      text-decoration: none;
       color: #555;
       font-weight: 500;
+      padding-bottom: 2px;
+      transition: color 0.3s, border-bottom 0.3s;
     }
+
     nav ul li a:hover {
       color: #00aaff;
       border-bottom: 2px solid #00aaff;
     }
 
-    section {
-      max-width: 1000px;
-      margin: 60px auto;
-      padding: 0 20px;
-    }
-
-    /* About */
+    /* ===== About ===== */
     .about {
       display: flex;
       align-items: center;
       gap: 40px;
     }
+
     .about-text { flex: 1; }
-    .about-text h2 { color: #c00; margin-bottom: 20px; }
     .about-text p { color: #555; margin-bottom: 20px; }
     .about-text .btn {
+      display: inline-block;
       background: #00aaff;
       color: #fff;
       padding: 10px 20px;
       border-radius: 5px;
-      text-decoration: none;
     }
+
     .about-image img {
       max-width: 250px;
-      border-radius: 50%; /* circular photo */
+      border-radius: 50%;
       object-fit: cover;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    /* Experience */
-    .experience h2, .skills h2, .portfolio h2, .contact h2 {
-      color: #c00;
-      margin-bottom: 20px;
-    }
-    .job {
-      background: #fff;
+    /* ===== Experience ===== */
+    .experience .job {
+      background: #f0f0f0;
       margin-bottom: 20px;
       padding: 15px;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
+
     .job h3 { color: #00aaff; margin: 0 0 5px; }
-    .job p { margin: 0 0 10px; color: #555; }
+    .job p { margin: 0 0 10px; color: #555; font-weight: 500; }
     .job ul { margin: 0; padding-left: 20px; }
 
-    /* Skills */
-    .skills ul { list-style: none; padding: 0; }
+    /* ===== Skills ===== */
+    .skills ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
     .skills ul li {
       background: #fff;
-      margin-bottom: 10px;
       padding: 10px 15px;
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      flex: 1 1 calc(50% - 10px);
     }
 
-    /* Portfolio */
+    /* ===== Portfolio ===== */
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
+
     .portfolio-item {
       background: #fff;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
       overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
+
     .portfolio-item img {
       width: 100%;
       height: 150px;
       object-fit: cover;
     }
+
     .portfolio-item h3 { margin: 15px; color: #333; }
     .portfolio-item p { margin: 0 15px 15px; color: #555; }
 
-    /* Contact */
+    /* ===== Contact ===== */
     .contact form {
       display: flex;
       flex-direction: column;
       gap: 15px;
       max-width: 500px;
     }
+
     .contact input, .contact textarea {
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 5px;
+      font-family: inherit;
     }
+
     .contact button {
       background: #00aaff;
       color: #fff;
@@ -143,18 +166,32 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
     .contact button:hover { background: #0088cc; }
 
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #fff;
+      color: #555;
+      margin-top: 40px;
+    }
+
+    /* ===== Responsive ===== */
     @media(max-width: 900px) {
       .about { flex-direction: column; text-align: center; }
+      .skills ul li { flex: 1 1 100%; }
     }
   </style>
 </head>
 <body>
+
+  <!-- Navigation -->
   <nav>
     <div class="logo">Lovella</div>
     <ul>
-      <li><a href="#about" class="active">About</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
@@ -177,6 +214,7 @@
   <!-- Experience -->
   <section id="experience" class="experience">
     <h2>Work Experience</h2>
+
     <div class="job">
       <h3>Customer Service Specialist</h3>
       <p><strong>ABC Company</strong> | 2016 – 2019</p>
@@ -186,6 +224,7 @@
         <li>Collaborated with cross-functional teams to streamline processes.</li>
       </ul>
     </div>
+
     <div class="job">
       <h3>Talent Acquisition Specialist</h3>
       <p><strong>XYZ Corporation</strong> | 2019 – 2022</p>
@@ -195,6 +234,7 @@
         <li>Built strong relationships with candidates and hiring managers.</li>
       </ul>
     </div>
+
     <div class="job">
       <h3>Data Analyst / Virtual Assistant</h3>
       <p><strong>Freelance</strong> | 2022 – Present</p>
@@ -239,4 +279,17 @@
   <section id="contact" class="contact">
     <h2>Contact Me</h2>
     <form action="https://formspree.io/f/yourFormID" method="POST">
-      <input type
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 Lovella Bayot. All rights reserved.
+  </footer>
+
+</body>
+</html>

@@ -167,6 +167,40 @@
     </ul>
   </section>
 
+  /* ===== Contact Form ===== */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+  background: #fff; /* white form to pop on light navy background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact input, .contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact button {
+  background: #001f5b; /* navy */
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.contact button:hover {
+  background: #004080; /* darker navy */
+}
   <!-- Footer -->
   <footer>
     &copy; 2026 Lovella Bayot. All rights reserved.
